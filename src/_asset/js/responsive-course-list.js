@@ -1,22 +1,31 @@
 try {
   const apiUrl = "https://learn.accountingcpd.net/ACPD/API/Test/SampleObject";
-  const courseListElement = document.querySelector("#course");
+  const courseElement = document.querySelector("#course");
+  const courseList = document.querySelector(".course__list");
 
   fetch(apiUrl)
     // fix fetch response
-    .then(result => result.json())
-    .then(result => render(result));
+    .then(r => r.json())
+    .then(d => render(d));
 
   const render = result => {
-    courseListElement.className = "list";
-    result.forEach(t => {
-      const h1 = document.createElement("h1");
-      h1.textContent = t.title;
-      courseListElement.appendChild(h1);
-    });
+    courseElement.className = "list";
+
+    const courseListInnerHtml = result
+      .map(elementInLoop => {
+        return `<div class="course__card">
+          <div class="course__type--${elementInLoop.type}" type="${elementInLoop.type}"></div>
+          <h1 class="course-title">${elementInLoop.title}</h1>
+          <p class="course-description">${elementInLoop.description}</p>
+          <p>Price: £${elementInLoop.price}</p>
+        </div>`;
+      })
+      .join("");
+    courseList.innerHTML = courseListInnerHtml;
   };
-  courseListElement.className = "list";
-  console.log(courseListElement);
+
+  // hide the loading message
+  courseElement.className = "list";
 } catch (e) {
   console.log("error", e);
 }

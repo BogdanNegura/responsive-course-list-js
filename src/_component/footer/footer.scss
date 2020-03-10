@@ -1,0 +1,18 @@
+.footer {
+  text-align: center;
+  height: 150px;
+  background-color: #1c232e;
+  color: white;
+
+  .footer-title {
+    color: white;
+    padding: 32px;
+  }
+
+  .footer-links > a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0 10px;
+  }
+}
