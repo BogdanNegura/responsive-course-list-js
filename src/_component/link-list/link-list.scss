@@ -1,0 +1,16 @@
+.link-list {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    text-decoration: none;
+    color: black;
+    border-top: 1px solid lightgray;
+    padding: 3px;
+
+    &[special] {
+      border-top: 1px solid #00aeef;
+      color: #00aeef;
+    }
+  }
+}
