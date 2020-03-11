@@ -3,6 +3,11 @@ try {
   const courseElement = document.querySelector("#course");
   const courseList = document.querySelector(".course__list");
   const loadMore = document.querySelector("#course__load-more");
+
+  loadMore.addEventListener("click", () => {
+    limit += 10;
+    render();
+  });
   let limit = 10;
   let result = [];
 
