@@ -1,53 +1,70 @@
-.course-title {
-  font-size: 24px;
-  font-family: "Roboto";
-  font-weight: medium;
-  margin-bottom: 16px;
-}
+.course {
+  &__title {
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: medium;
+    margin-bottom: 16px;
+  }
 
-.course-description {
-  font-size: 18px;
-  line-height: 26px;
-  margin-bottom: 12px;
-}
+  &__description {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
 
-.course__type {
-  &--tax {
-    background-image: url(/asset/image/tax.png);
-    &:before {
-      background-color: #ff31c1;
+  &__type {
+    &--tax {
+      background-image: url(/asset/image/tax.png);
+      &:before {
+        background-color: #ff31c1;
+      }
+    }
+    &--communication {
+      background-image: url(/asset/image/communication.png);
+      &:before {
+        background-color: #ef7c00;
+      }
+    }
+    &--technology {
+      background-image: url(/asset/image/technology.png);
+      &:before {
+        background-color: #99c736;
+      }
+    }
+    &--tax,
+    &--communication,
+    &--technology {
+      width: 100%;
+      padding-top: 56.25%;
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 24px;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: attr(type);
+        top: 31px;
+        padding: 4px;
+        color: white;
+        text-transform: uppercase;
+        font-family: "Roboto";
+      }
     }
   }
-  &--communication {
-    background-image: url(/asset/image/communication.png);
-    &:before {
-      background-color: #ef7c00;
-    }
-  }
-  &--technology {
-    background-image: url(/asset/image/technology.png);
-    &:before {
-      background-color: #99c736;
-    }
-  }
-  &--tax,
-  &--communication,
-  &--technology {
-    width: 100%;
-    padding-top: 56.25%;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 24px;
-    position: relative;
-
-    &:before {
-      position: absolute;
-      content: attr(type);
-      top: 31px;
-      padding: 4px;
+  &__load-more {
+    &--off,
+    &--on {
+      background-color: green;
+      border-radius: 4px;
       color: white;
-      text-transform: uppercase;
-      font-family: "Roboto";
+      border: 0;
+    }
+    &--off {
+      display: none;
+    }
+    &--on {
+      display: inline-block;
     }
   }
 }
