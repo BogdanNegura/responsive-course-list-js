@@ -14,19 +14,19 @@
 
   &__type {
     &--tax {
-      background-image: url(/asset/image/tax.png);
+      background-image: url(#{$baseUrl}asset/image/tax.png);
       &:before {
         background-color: #ff31c1;
       }
     }
     &--communication {
-      background-image: url(/asset/image/communication.png);
+      background-image: url(#{$baseUrl}asset/image/communication.png);
       &:before {
         background-color: #ef7c00;
       }
     }
     &--technology {
-      background-image: url(/asset/image/technology.png);
+      background-image: url(#{$baseUrl}asset/image/technology.png);
       &:before {
         background-color: #99c736;
       }
