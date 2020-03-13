@@ -1,0 +1,16 @@
+@media (min-width: 1170px) {
+}
+#course .course__card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 16px;
+  margin-bottom: 15px;
+}
+[class^="course__type--"] {
+  grid-row: 1/-1;
+  &:after {
+    background-size: cover;
+    background-position: center;
+  }
+}

@@ -1,0 +1,10 @@
+@media (min-width: 1170px) {
+  .burger {
+    display: none;
+  }
+  .dropdown {
+    right: 0;
+    top: 0;
+    grid-template-columns: auto auto;
+  }
+}
