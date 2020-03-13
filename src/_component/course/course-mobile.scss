@@ -6,6 +6,8 @@
   left: 0;
   width: 100%;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .course {
   &__title {
@@ -56,7 +58,7 @@
     &--communication,
     &--technology {
       width: 100%;
-      padding-top: 56.25%;
+      padding-top: 100%;
       background-size: cover;
       background-position: center;
       margin-bottom: 24px;
@@ -98,6 +100,7 @@
       }
       & ~ .course__list .course__card {
         display: inline-block;
+        width: 100%;
       }
     }
     &:nth-of-type(2):checked {
@@ -106,6 +109,7 @@
       }
       & ~ .course__list .course__card[type="communication"] {
         display: inline-block;
+        width: 100%;
       }
     }
     &:nth-of-type(3):checked {
@@ -114,6 +118,7 @@
       }
       & ~ .course__list .course__card[type="tax"] {
         display: inline-block;
+        width: 100%;
       }
     }
     &:nth-of-type(4):checked {
@@ -122,6 +127,7 @@
       }
       & ~ .course__list .course__card[type="technology"] {
         display: inline-block;
+        width: 100%;
       }
     }
   }
